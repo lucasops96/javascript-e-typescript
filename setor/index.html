@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="setor.js"></script>
+</head>
+
+<body>
+    <div>
+
+        <h2>Criar setor</h2>
+        <div class="tipo-setor">
+            <input type="radio" name="setor-entrada" value="Entrada" onclick="tipoSetor(1)">
+            <label for="entrada">Entrada</label>
+
+            <input type="radio" name="setor-saida" value="Saída" onclick="tipoSetor(2)">
+            <label for="saida">Saída</label>
+        </div>
+
+        <div class="info">
+            <div class="info-content">
+                <label for="subsetor">Subsetor:</label>
+                <input type="text" name="subsetores" id="subsetor">
+                <button onclick="aplicarSubsetores()">Aplicar</button>
+            </div>
+            <div class="info-content">
+                <label for="containers">Containers:</label>
+                <input type="text" name="containers" id="containers">
+                <button onclick="aplicarContainers()">Aplicar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="setor-exemplo">
+        <table id="setor-tabela">
+            <thead id="setor-tabela-head">
+            </thead>
+            <tbody id="setor-tabele-body">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

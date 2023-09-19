@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+tr {
+    border: 1px solid black;
+    background: green;
+}
+
+.info{
+    
+    margin-top:5px;
+}
+
+.info-content{
+    
+    margin-top:5px;
+}
