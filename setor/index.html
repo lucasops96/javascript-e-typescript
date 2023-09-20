@@ -10,40 +10,47 @@
 </head>
 
 <body>
-    <div>
 
-        <h2>Criar setor</h2>
-        <div class="tipo-setor">
-            <input type="radio" name="setor-entrada" value="Entrada" onclick="tipoSetor(1)">
-            <label for="entrada">Entrada</label>
+    <main class="main-content">
+        <div class="form-criar-setor">
+            <form>
+                <h2>Criar setor</h2>
+                <div class="tipo-setor">
+                    <input type="radio" name="setor" id="entrada" value="entrada">
+                    <label for="entrada">Entrada</label>
 
-            <input type="radio" name="setor-saida" value="Saída" onclick="tipoSetor(2)">
-            <label for="saida">Saída</label>
+                    <input type="radio" name="setor" id="saida" value="saída">
+                    <label for="saida">Saída</label>
+                </div>
+
+                <div class="info">
+                    <div class="info-content">
+                        <label for="subsetor">Subsetor:</label>
+                        <input type="text" name="subsetores" id="subsetor" required>
+
+                    </div>
+                    <div class="info-content">
+                        <label for="containers">Containers:</label>
+                        <input type="text" name="containers" id="containers" required>
+                    </div>
+                </div>
+
+                <button onclick="aplicar()" type="button">Aplicar</button>
+                <button onclick="limpar()" type="button">Limpar</button>
+            </form>
+
         </div>
 
-        <div class="info">
-            <div class="info-content">
-                <label for="subsetor">Subsetor:</label>
-                <input type="text" name="subsetores" id="subsetor">
-                <button onclick="aplicarSubsetores()">Aplicar</button>
-            </div>
-            <div class="info-content">
-                <label for="containers">Containers:</label>
-                <input type="text" name="containers" id="containers">
-                <button onclick="aplicarContainers()">Aplicar</button>
-            </div>
+        <div id="setor-exemplo">
+            <table id="setor-tabela">
+                <thead id="setor-tabela-head">
+                </thead>
+                <tbody id="setor-tabele-body">
+                </tbody>
+            </table>
         </div>
 
-    </div>
-
-    <div id="setor-exemplo">
-        <table id="setor-tabela">
-            <thead id="setor-tabela-head">
-            </thead>
-            <tbody id="setor-tabele-body">
-            </tbody>
-        </table>
-    </div>
+    </main>
 </body>
 
 </html>

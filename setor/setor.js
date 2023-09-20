@@ -1,46 +1,25 @@
-function tipoSetor(num){
-    let tipo
-    if (num == 1){
-        tipo = document.querySelector("input[name='setor-entrada']").value
-    }else{
-        tipo = document.querySelector("input[name='setor-saida']").value
-    }
+
+function aplicar(){
+    let tipo = document.querySelector("input[name='setor']:checked").value
 
     let infoSetorTipo = document.createElement("h3")
-    infoSetorTipo.innerText = "Setor " + tipo
+    infoSetorTipo.innerText = "Setor " + String(tipo).toUpperCase()
 
     document.getElementById("setor-tabela-head").appendChild(infoSetorTipo)
-}
 
-
-function aplicarSubsetores(){
-    let quantSubsetores = document.querySelector("input[name='subsetores']").value
-
-    for (let i = 0; i < Number(quantSubsetores); i++) {
-        let subsetor = document.createElement('div')
-        subsetor.innerText= `Subsetor ${i+1}`
-        let tagTR = document.createElement('tr')
-        subsetor.appendChild(tagTR)
-
-        document.getElementById("setor-tabele-body").appendChild(subsetor)
-    }
-}
-
-alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVXYZ'
-
-function aplicarContainers(){
     let quantSubsetores = document.querySelector("input[name='subsetores']").value
     let quantContainers = document.querySelector("input[name='containers']").value
 
     for (let i = 0; i < Number(quantSubsetores); i++) {
         let subsetor = document.createElement('div')
+        subsetor.setAttribute("class","subsetores")
         subsetor.innerText= `Subsetor ${i+1}`
         let tagTR = document.createElement('tr')
         
 
         for (let j = 0; j < Number(quantContainers); j++) {
             let tagTD = document.createElement('td')
-            tagTD.innerText = alfabeto[j]
+            tagTD.innerText = String.fromCharCode(65+j)
             tagTR.appendChild(tagTD)
         }
         
