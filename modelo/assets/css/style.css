@@ -15,8 +15,7 @@ body{
     padding:0;
     background: var(--primary-color);
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
-    line-height: 1.5em;
+    font-size: 1.2em;
 }
 
 .container{
@@ -25,6 +24,30 @@ body{
     background: white;
     padding: 20px;
     border-radius: 10px;
+}
+.imc-title{
+    margin: 0 auto;
+}
+.infos{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.infos-imc{
+    width: 50%;
+}
+
+.infos-resultado{
+    width: 50%;
+}
+
+.resultado-calculo-style{
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    font-size: 1em;
 }
 
 form input, form label, form button{
