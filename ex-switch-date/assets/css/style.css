@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@300;700&display=swap');
+
+:root{
+    --primary-color:rgb(17,86,102);
+    --primary-color-darker:rgb(9,48,56);
+}
+
+*{
+    box-sizing:border-box;
+    outline:0;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.imc-title{
+    margin: 0 auto;
+}
+.infos{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.infos-imc{
+    width: 50%;
+}
+
+.infos-resultado{
+    width: 50%;
+}
+
+.paragrafo-resultado{
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.bad{
+    background-color: rgb(252, 17, 17);
+    color: black;
+    padding: 10px;
+    font-size: 1em;
+}
+
+form input, form label, form button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus{
+    outline:1px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight:700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover{
+    background:var(--primary-color-darker);
+}
+
+form button:active{
+    background: black;
+}
