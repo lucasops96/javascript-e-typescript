@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #bloco{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+        }
+        #bloco2{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="bloco"></div>
+        <div id="bloco2"></div>
+    </div>
+    <p id="texto"></p>
+</body>
+<script>
+    $("#bloco").on({
+        click:()=>{$("#texto").text("Quadrado clicado")},
+        mouseenter:()=>{$("#texto").text('Mouse entrou no quadrado')},
+        mouseleave:()=>{$("#texto").text("Mouse saiu do quadrado")},
+    })
+
+    $("#bloco2").click(()=>{
+        $("#bloco").trigger("click")
+    })
+</script>
+</html>
