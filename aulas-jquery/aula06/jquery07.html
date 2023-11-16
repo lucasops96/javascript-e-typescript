@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <p id="texto"></p>
+</body>
+<script>
+    let pmx = 0
+    let pmy = 0
+
+    $(document).mousemove((event)=>{
+        pmx = event.pageX
+        pmy = event.pageY
+        if (pmx > 500){
+            pmx = "pmx maior que 500"
+        }
+        $("#texto").text("Mouse x: " + pmx + "px , Mouse y: "+ pmy +"px")
+    })
+</script>
+</html>
